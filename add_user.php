@@ -1,46 +1,36 @@
 <?php
-if (isset($_POST['email']) and isset($_POST['facebook_id']) and isset($_POST['full_name']) and isset($_POST['first_name']) and isset($_POST['last_name']) and isset($_POST['profile_url']) and isset($_POST['access_token'])) {
+
+require_once 'includes/db_connect.php';
+require_once 'includes/error_handling.php';
+
+if (isset($_POST['username']) and isset($_POST['password'])) {
 	
-	require_once 'includes/db_connect.php';
-	require_once 'includes/error_handling.php'; 
-	
+	$username = $_POST['username'];
+	$password = $_POST['password'];
+
 	try {
-		$user = $users->findOne(['email' => $_POST['email']]);
-		//user not found, let's add to db
-		if (!$user) {
+		$user = $users->findOne(['username' => $username]);
+		if ($user == null) {
+			//Username does not exist, go ahead with the input
 			$query = [
-				'email' => $_POST['email'],
-				'facebook_id' => $_POST['facebook_id'],
-				'full_name' => $_POST['full_name'],
-				'first_name' => $_POST['first_name'],
-				'last_name' => $_POST['last_name'],
-				'profile_url' => $_POST['profile_url'],
-				'access_token' => $_POST['access_token']
+				'username' => $username,
+				'password' => password_hash($password, PASSWORD_DEFAULT)
 			];
-			try {
-				$users->insert($query);
-				success();
-				exit;
-			} catch (Exception $e) {
-				//TODO add stuff here
-				exit;
-			}
+			$users->insert($query);
+			echo json_encode(['status' => 'success']);
 		} else {
-		//user is found, let's update access token	
-		//TODO add code for updating access token
-			success();
-			exit; 
+			//Username does exist, do not go ahead
+			echo json_encode(['status' => 'username exists']);
+			exit;
 		}
 	} catch (Exception $e) {
-		//TODO add stuff here
-		exit;	
+		report_error('error', $e->getMessage(), 'adding user');
+		exit;
 	}
+
 } else {
-	report_error('improper params', 'improper params', ' ');
+	report_error('error', 'improper params', ' ');
 	exit;  
 }
-	
-
-
 
 ?>
