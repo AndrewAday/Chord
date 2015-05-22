@@ -8,7 +8,7 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
 	$password = $_POST['password'];
 
 	try {
-		$user = $users->findOne(['username'] => $username);
+		$user = $users->findOne(['username' => $username]);
 		if ($user != null) {
 			//User found, do comparison
 			if (password_verify($password, $user['password'])) {
