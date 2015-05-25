@@ -7,7 +7,7 @@ require 'includes/error_handling.php';
 
 	$api = new SpotifyWebAPI\SpotifyWebAPI();
 	// $api->setAccessToken($accessToken);
-	$api->setAccessToken("BQAifbDq7-urQbERBirCaiP3sFDMUI6fXjyRqxYlS4991aADHRT5mrf6D6RJSurbGPofXQu7y12rer5gBCW99-6IlRdz06s_etLPyoZbkiM5rGujRqy8iTUVl3-c7rcdUWvYve-4wefy0kiTza4TOa3g3eZfpKTvnCFKx3mGRYZkjVATtNCVZUeZxa_sAb4mHz6iOFz9eWIHXJRsYbQS8WZgLnnAP5mwEmnIZdQGcr39qlEx_mtEM4Yd5ys6FmGr7yyFwOwXE0D1c56Z-ZFx_5G_");
+	$api->setAccessToken("BQD0Nhr6Ol2TfGKXFw2L3KkbwcYY2Y35S-AvFRVhTBF4Qaq8MyIKkyVPeqskam6igUKwTSoHJLH_TYLOj4CHzoAv6O0R68SkmSnWQGp8VhATGZcQ4aWcHVyFOFpBGEhG2cT6zm4cexOuDnzMAWO5UzE0OTRiwFw8nMfntvqc6-wzz3JDuAuC0FHGuw4LHTiiz1Bh3nl0li1rfpZafaZwpDzrj5u75-fLyOfnQaVsUDOx_69XO-19SQgiY-BT23_bCt3blN4RTEiIPDiY4w-D4Kpy");
 
 	$me = $api->me();
 	print_r($me);
