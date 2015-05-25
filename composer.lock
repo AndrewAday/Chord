@@ -1,0 +1,64 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "412043eb259cc1909e7096ea68ef74fe",
+    "packages": [
+        {
+            "name": "jwilsson/spotify-web-api-php",
+            "version": "0.8.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jwilsson/spotify-web-api-php.git",
+                "reference": "3e8d6cc277a6c0c95aa27641cfddef5911f5eb07"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jwilsson/spotify-web-api-php/zipball/3e8d6cc277a6c0c95aa27641cfddef5911f5eb07",
+                "reference": "3e8d6cc277a6c0c95aa27641cfddef5911f5eb07",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*",
+                "satooshi/php-coveralls": "dev-master",
+                "vlucas/phpdotenv": "1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SpotifyWebAPI\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Wilsson",
+                    "email": "jonathan.wilsson@gmail.com"
+                }
+            ],
+            "description": "PHP implementation of Spotify's Web API.",
+            "homepage": "http://jwilsson.github.io/spotify-web-api-php/",
+            "keywords": [
+                "spotify"
+            ],
+            "time": "2015-05-02 11:38:12"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
