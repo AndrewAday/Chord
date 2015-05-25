@@ -3,7 +3,7 @@
 require 'vendor/autoload.php';
 require 'includes/error_handling.php';
 
-if (isset($_POST['token'])) {
+// if (isset($_POST['token'])) {
 
 	$api = new SpotifyWebAPI\SpotifyWebAPI();
 	// $api->setAccessToken($accessToken);
@@ -18,10 +18,10 @@ if (isset($_POST['token'])) {
 
 	print_r($playlists);
 
-} else {
-	report_error('error', 'improper params', 'spotify_get_playlists');
-	exit;
-}
+// } else {
+// 	report_error('error', 'improper params', 'spotify_get_playlists');
+// 	exit;
+// }
 
 
 ?>
