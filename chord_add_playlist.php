@@ -12,6 +12,7 @@ if (isset($_POST['username']) and isset($_POST['playlist_id'])) {
 
 	try {
 		$users->update($user, ['$set' => [$playlist => []]]);
+		$users->update($user, ['$addToSet' => ['playlists' => $playlist]]);
 		success();
 		exit;
 	} catch (Exception $e) {
