@@ -16,7 +16,7 @@ if (isset($_POST['username']) and isset($_POST['playlist_id']) and isset($_POST[
 
 	$track_update = [
 		'type' => $type,
-		'id' => $track
+		'id' => $track,
 		'name' => $name,
 		'artist' => $artist
 	];
