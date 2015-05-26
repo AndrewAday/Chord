@@ -10,7 +10,7 @@ if (isset($_POST['username'])) {
 
 	$playlists = $user['playlists'];
 
-	$ret['playlists'] = $playlists
+	$ret['playlists'] = $playlists;
 	$ret['sizes'] = [];
 	$counter = 0;
 	foreach ($playlists as $playlist) {
