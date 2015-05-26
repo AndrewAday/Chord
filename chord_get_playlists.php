@@ -15,6 +15,7 @@ if (isset($_POST['username'])) {
 	$counter = 0;
 	foreach ($playlists as $playlist) {
 		$ret['sizes'][$counter] = count($user[$playlist]);
+		$counter++;
 	}
 	echo json_encode($ret);
 
