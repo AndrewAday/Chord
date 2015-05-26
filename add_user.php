@@ -14,7 +14,8 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
 			//Username does not exist, go ahead with the input
 			$query = [
 				'username' => $username,
-				'password' => password_hash($password, PASSWORD_DEFAULT)
+				'password' => password_hash($password, PASSWORD_DEFAULT),
+				'playlists' => []
 			];
 			$users->insert($query);
 			echo json_encode(['status' => 'success']);

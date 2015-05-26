@@ -2,10 +2,10 @@
 
 function report_error($status, $error, $location) {
 	echo json_encode([
-			'status' => $status,
-			'error' => $error,
-			'location' => $location
-		]);
+		'status' => $status,
+		'error' => $error,
+		'location' => $location
+	]);
 }
 
 function success() {
