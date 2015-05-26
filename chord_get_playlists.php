@@ -10,7 +10,13 @@ if (isset($_POST['username'])) {
 
 	$playlists = $user['playlists'];
 
-	echo json_encode($playlists);
+	$ret['playlists'] = $playlists
+	$ret['sizes'] = [];
+	$counter = 0;
+	foreach ($playlists as $playlist) {
+		$ret['sizes'][$counter] = count($user[$playlist]);
+	}
+	echo json_encode($ret);
 
 } else {
 	report_error('error', 'improper params', 'chord_get_playlists');
