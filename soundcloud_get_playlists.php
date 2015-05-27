@@ -9,7 +9,7 @@ require_once 'includes/error_handling.php';
 
 // if (isset($_POST['username'])) {
 	$username = $_POST['username'];
-
+	$username = "";
 	$user = $users->findOne(['username' => $username]);
 	$access_token = $user['soundcloud_access_token'];
 	$access_token = "1-131075-155055189-cbb4df746fe9d";
