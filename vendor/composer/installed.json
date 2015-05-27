@@ -46,5 +46,47 @@
         "keywords": [
             "spotify"
         ]
+    },
+    {
+        "name": "glenscott/soundcloud",
+        "version": "dev-psr-4",
+        "version_normalized": "dev-psr-4",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mptre/php-soundcloud",
+            "reference": "71a9e308cc9ed87c63cf41217f87bf844e40a74c"
+        },
+        "require": {
+            "lib-curl": "*",
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.0.*"
+        },
+        "time": "2015-05-11 14:22:58",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "SoundCloud\\": "src"
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Anton Lindqvist",
+                "email": "anton@qvister.se"
+            },
+            {
+                "name": "Glen Scott",
+                "email": "glen@glenscott.co.uk"
+            }
+        ],
+        "description": "SoundCloud API Wrapper",
+        "keywords": [
+            "soundcloud"
+        ]
     }
 ]

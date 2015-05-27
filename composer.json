@@ -1,5 +1,12 @@
 {
+	"repositories" : [
+		{
+			"type" : "git",
+			"url" : "https://github.com/mptre/php-soundcloud"
+		}
+	],
 	"require" : {
-    		"jwilsson/spotify-web-api-php": "0.8.*"
+    		"jwilsson/spotify-web-api-php": "0.8.*",
+		"glenscott/soundcloud": "dev-psr-4"
 	}
 }
