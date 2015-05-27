@@ -1,5 +1,8 @@
 <?php 
 
+error_reporting(E_ALL | E_STRICT);
+    ini_set("display_errors", true);
+
 require 'vendor/auto_load.php';
 require_once 'includes/db_connect.php';
 require_once 'includes/error_handling.php';
